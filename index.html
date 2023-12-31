@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="logo.jpeg" alt="Loging"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a game<br><span>Game Of Thron</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi numquam dignissimos excepturi
+                    repellendus debitis soluta velit, voluptatibus blanditiis qui nostrum unde nesciunt provident. Rerum
+                    enim similique adipisci quaerat, molestias cupiditate.</p>
+                    <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="character.png" alt="loading" class="games">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="character.png" onclick="imgSlider('character.png'); changeCircleColor('red')"></li>
+            <li><img src="char2.png" onclick="imgSlider('char2.png'); changeCircleColor('orange')"></li>
+            <li><img src="char3.png" onclick="imgSlider('char3.png'); changeCircleColor('pink')"></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.games').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
